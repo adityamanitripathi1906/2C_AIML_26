@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function F(fn)
+        {
+            let FN = fn;
+            return FN;
+        }
+        function L(ln)
+        {
+            let LN=ln;
+            return LN;
+            
+        }
+        function M(Mn)
+        {
+            let MN = Mn;
+            return MN;
+        }
+        function Name()
+        {
+            let FirstName=F("Aditya");
+            let MiddleName=M("Mani");
+            let LastName=L("Tripathi");
+        
+        document.write(FirstName+" "+MiddleName+" "+LastName);
+        }
+    </script>
+</head>
+<body>
+    <INPUT TYPE = "Button" onclick="Name()" value ="display">
+    
+</body>
+</html>
