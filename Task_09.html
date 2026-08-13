@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>String Functions</title>
+</head>
+<body>
+
+    <h2>JavaScript String Functions</h2>
+
+    <script>
+
+        let str = "Hello JavaScript Hello";
+
+        document.write("Original String: " + str + "<br><br>");
+
+        let index = str.indexOf("Hello");
+        document.write("indexOf('Hello'): " + index + "<br><br>");
+
+        let lastIndex = str.lastIndexOf("Hello");
+        document.write("lastIndexOf('Hello'): " + lastIndex + "<br><br>");
+
+        let str2 = " Programming";
+        let concatResult = str.concat(str2);
+        document.write("concat(): " + concatResult + "<br><br>");
+
+        let sliceResult = str.slice(6, 16);
+        document.write("slice(6,16): " + sliceResult + "<br><br>");
+
+        let substrResult = str.substr(6, 10);
+        document.write("substr(6,10): " + substrResult + "<br><br>");
+
+        let upperResult = str.toUpperCase();
+        document.write("toUpperCase(): " + upperResult + "<br><br>");
+
+        let lowerResult = str.toLowerCase();
+        document.write("toLowerCase(): " + lowerResult + "<br><br>");
+
+        let email = prompt("Enter your email ID:");
+
+        let atIndex = email.indexOf("@");
+        let dotIndex = email.indexOf(".");
+
+        if (atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < email.length - 1) {
+            document.write("Email: " + email + "<br>");
+            document.write("Valid Email ID");
+        } else {
+            document.write("Email: " + email + "<br>");
+            document.write("Invalid Email ID");
+        }
+
+    </script>
+
+</body>
+</html>
