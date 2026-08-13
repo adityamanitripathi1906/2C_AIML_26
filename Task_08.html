@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Functions</title>
+</head>
+<body>
+
+    <h2>JavaScript Array Functions</h2>
+
+    <script>
+
+        let arr = [10, 20, 30, 40, 50];
+
+        document.write("Original Array: " + arr + "<br><br>");
+
+        let length = arr.length;
+        document.write("Length: " + length + "<br><br>");
+
+        let pushResult = arr.push(60);
+        document.write("After push(60): " + arr + "<br>");
+        document.write("push() returned: " + pushResult + "<br><br>");
+
+        let popResult = arr.pop();
+        document.write("After pop(): " + arr + "<br>");
+        document.write("pop() returned: " + popResult + "<br><br>");
+
+        let unshiftResult = arr.unshift(5);
+        document.write("After unshift(5): " + arr + "<br>");
+        document.write("unshift() returned: " + unshiftResult + "<br><br>");
+
+        let shiftResult = arr.shift();
+        document.write("After shift(): " + arr + "<br>");
+        document.write("shift() returned: " + shiftResult + "<br><br>");
+
+        let arr2 = [60, 70];
+        let concatResult = arr.concat(arr2);
+        document.write("After concat(): " + concatResult + "<br><br>");
+
+        let sliceResult = arr.slice(1, 4);
+        document.write("After slice(1, 4): " + sliceResult + "<br><br>");
+
+        let spliceResult = arr.splice(2, 1, 35);
+        document.write("After splice(2, 1, 35): " + arr + "<br>");
+        document.write("splice() returned: " + spliceResult + "<br><br>");
+
+        let reverseResult = arr.reverse();
+        document.write("After reverse(): " + reverseResult + "<br><br>");
+
+        let sliceResult2 = arr.slice(1, 3);
+        document.write("After slice(1, 3): " + sliceResult2 + "<br><br>");
+
+    </script>
+<h1><center><i><b><u>There is difference in return value of all functions</u></b></i></center></h1>
+</body>
+</html>

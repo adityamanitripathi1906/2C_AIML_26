@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Functions</title>
+</head>
+<body>
+
+    <h2>JavaScript Array Functions</h2>
+
+    <script>
+
+        let arr = [10, 20, 30, 40, 50];
+
+        document.write("Original Array: " + arr + "<br><br>");
+
+        document.write("Length: " + arr.length + "<br><br>");
+
+        arr.push(60);
+        document.write("After push(60): " + arr + "<br><br>");
+
+        arr.pop();
+        document.write("After pop(): " + arr + "<br><br>");
+
+        arr.unshift(5);
+        document.write("After unshift(5): " + arr + "<br><br>");
+
+        arr.shift();
+        document.write("After shift(): " + arr + "<br><br>");
+
+        let arr2 = [60, 70];
+        let newArr = arr.concat(arr2);
+        document.write("After concat(): " + newArr + "<br><br>");
+
+        let sliced = arr.slice(1, 4);
+        document.write("After slice(1,4): " + sliced + "<br><br>");
+
+        arr.splice(2, 1, 35);
+        document.write("After splice(2,1,35): " + arr + "<br><br>");
+
+        arr.reverse();
+        document.write("After reverse(): " + arr + "<br><br>");
+
+        let sliced2 = arr.slice(1, 3);
+        document.write("Another slice(1,3): " + sliced2 + "<br><br>");
+        let p=arr.pop()
+
+    </script>
+
+</body>
+</html>
