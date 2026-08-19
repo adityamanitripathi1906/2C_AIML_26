@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+
+    <script>
+        function validate()
+        {
+            var name = document.registration.name.value;
+            var email = document.registration.email.value;
+            var number = document.registration.number.value;
+            var password = document.registration.password.value;
+
+            // Name validation
+            if (name == "")
+            {
+                alert("Please enter your name");
+                return false;
+            }
+
+            // Email validation
+            var pos = email.lastIndexOf("@");
+            var dotpos = email.lastIndexOf(".");
+
+            if (email == "")
+            {
+                alert("Please enter your email");
+                return false;
+            }
+
+            if (pos < 1 || dotpos < pos + 2 || dotpos + 2 >= email.length)
+            {
+                alert("Please enter a valid email address");
+                return false;
+            }
+
+            // Phone number validation
+            if (number == "")
+            {
+                alert("Please enter your phone number");
+                return false;
+            }
+
+            if (number.length != 10)
+            {
+                alert("Phone number must contain 10 digits");
+                return false;
+            }
+
+            // Password validation
+            if (password == "")
+            {
+                alert("Please enter your password");
+                return false;
+            }
+
+            if (password.length < 8)
+            {
+                alert("Password must contain at least 8 characters");
+                return false;
+            }
+
+            alert("Registration Successful!");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>Registration Form</h2>
+
+    <form name="registration"
+          action="#"
+          onsubmit="return validate()">
+
+        Name:
+        <input type="text" name="name">
+        <br><br>
+
+        Email:
+        <input type="text" name="email">
+        <br><br>
+
+        Phone Number:
+        <input type="text" name="number">
+        <br><br>
+
+        Password:
+        <input type="password" name="password">
+        <br><br>
+
+        <input type="submit" value="Register">
+
+    </form>
+
+</body>
+</html>
