@@ -4,63 +4,53 @@
     <title>Registration Form</title>
 
     <script>
-        function validate()
+        function Validate()
         {
-            var name = document.registration.name.value;
-            var email = document.registration.email.value;
-            var number = document.registration.number.value;
-            var password = document.registration.password.value;
+            var n = document.Registration.uname.value;
 
-            // Name validation
-            if (name == "")
+        
+            if (n == "" || !isNaN(n))
             {
-                alert("Please enter your name");
+                alert("Fill Your Name");
                 return false;
             }
 
-            // Email validation
-            var pos = email.lastIndexOf("@");
-            var dotpos = email.lastIndexOf(".");
 
-            if (email == "")
+            var number = document.Registration.Contact.value;
+
+        
+            if (number == "" || isNaN(number) || number.length != 10)
             {
-                alert("Please enter your email");
+                alert("Fill your mobile number correctly");
                 return false;
             }
 
-            if (pos < 1 || dotpos < pos + 2 || dotpos + 2 >= email.length)
+
+            var e = document.Registration.email.value;
+
+            var atpos = e.lastIndexOf("@");
+            var dotpos = e.lastIndexOf(".");
+
+        
+            if (e == "" || atpos < 1 || dotpos < atpos + 2 || dotpos + 2 >= e.length)
             {
-                alert("Please enter a valid email address");
+                alert("Fill a valid email address");
                 return false;
             }
 
-            // Phone number validation
-            if (number == "")
-            {
-                alert("Please enter your phone number");
-                return false;
-            }
 
-            if (number.length != 10)
-            {
-                alert("Phone number must contain 10 digits");
-                return false;
-            }
+            var password = document.Registration.password.value;
 
-            // Password validation
-            if (password == "")
-            {
-                alert("Please enter your password");
-                return false;
-            }
-
-            if (password.length < 8)
+        
+            if (password == "" || password.length < 8)
             {
                 alert("Password must contain at least 8 characters");
                 return false;
             }
 
-            alert("Registration Successful!");
+
+            alert("Registration Successful");
+
             return true;
         }
     </script>
@@ -70,27 +60,31 @@
 
     <h2>Registration Form</h2>
 
-    <form name="registration"
+    <form name="Registration"
           action="#"
-          onsubmit="return validate()">
+          onsubmit="return Validate()">
 
         Name:
-        <input type="text" name="name">
+        <input type="text" name="uname">
+        <br><br>
+
+        Contact:
+        <input type="text" name="Contact">
+        <br><br>
+
+        Registration Number:
+        <input type="text" name="Registartion">
         <br><br>
 
         Email:
         <input type="text" name="email">
         <br><br>
 
-        Phone Number:
-        <input type="text" name="number">
-        <br><br>
-
         Password:
         <input type="password" name="password">
         <br><br>
 
-        <input type="submit" value="Register">
+        <input type="submit" value="Submit">
 
     </form>
 
